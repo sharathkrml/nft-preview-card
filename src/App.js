@@ -20,19 +20,18 @@ function App() {
         <div className="eth-div">
           <div className="price">
             <img src={eth} alt="eth" />
-            0.041 ETH
+             0.041 ETH
           </div>
           <div className="time">
             <img src={clock} alt="clock" /> 3 days left
           </div>
-          <hr />
-          <div className="creator">
-            <div className="creator-img">
-              <img src={avatar} alt="avatar" />
-            </div>
-            <div className="creator-desc">
-              Creation of <span>Jules Wyvern</span>
-            </div>
+        </div>
+
+        <hr />
+        <div className="creator">
+            <img src={avatar} alt="avatar" />
+          <div className="creator-desc">
+            Creation of <span>Jules Wyvern</span>
           </div>
         </div>
       </div>

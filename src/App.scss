@@ -1,3 +1,78 @@
 @forward "./General";
+@use "./General.scss" as var;
 @use "./mixins.scss" as mixin;
+:root {
+  --main-font: 1.2em;
+  --desc-font: 0.9em;
+}
+.App {
+  min-height: 100vh;
+  @include mixin.displayFlex(column, center, center);
+}
+.main-div {
+  width: 60%;
+  border-radius: 10px;
+  @include mixin.displayFlex(column, center, center);
+  background-color: var.$card-BG;
+}
+.main-img {
+  margin-top: 10%;
+  width: 80%;
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+.main-head {
+  align-self: flex-start;
+  margin: 5% 10%;
+  color: var.$White;
+  font-weight: 600;
+  font-size: var(--main-font);
+}
+.desc {
+  align-self: flex-start;
+  margin: 0 10%;
+  color: var.$Soft-blue;
+  font-size: var(--desc-font);
+}
+.eth-div {
+  @include mixin.displayFlex(row, center, space-between);
+  width: 80%;
+  margin: 5% 0;
+  font-size: var(--desc-font);
+}
+hr {
+  width: 90%;
+  background-color: var.$line;
+  height: 1px;
+  border: 0;
+}
 
+.creator {
+  @include mixin.displayFlex(row, center, flex-start);
+  font-size: var(--desc-font);
+  align-self: flex-start;
+  margin: 5% 5%;
+  color: var.$Soft-blue;
+  img {
+    width: 12%;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  span {
+    color: var.$White;
+  }
+}
+.price {
+  display: flex;
+  color: var.$Cyan;
+  img {
+    margin-right: 5px;
+  }
+}
+.time {
+  display: flex;
+  color: var.$Soft-blue;
+}
