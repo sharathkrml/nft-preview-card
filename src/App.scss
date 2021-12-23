@@ -11,6 +11,9 @@
 }
 .main-div {
   width: 60%;
+  @media screen and (min-width: 425px) {
+    width: 300px;
+  }
   border-radius: 10px;
   @include mixin.displayFlex(column, center, center);
   background-color: var.$card-BG;
@@ -18,17 +21,44 @@
 .main-img {
   margin-top: 10%;
   width: 80%;
+  position: relative;
+  opacity: 0.5;
+  cursor: pointer;
   img {
     width: 100%;
     border-radius: 10px;
   }
+  &:hover .middle {
+    opacity: 1;
+  }
 }
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.4);
+  img {
+    width: 20%;
+    margin: 40% auto;
+  }
+}
+
 .main-head {
   align-self: flex-start;
   margin: 5% 10%;
   color: var.$White;
   font-weight: 600;
   font-size: var(--main-font);
+  cursor: pointer;
+  &:hover {
+    color: var.$Cyan;
+  }
 }
 .desc {
   align-self: flex-start;
@@ -55,6 +85,7 @@ hr {
   align-self: flex-start;
   margin: 5% 5%;
   color: var.$Soft-blue;
+  cursor: pointer;
   img {
     width: 12%;
     border: 1px solid white;
@@ -63,6 +94,9 @@ hr {
   }
   span {
     color: var.$White;
+    &:hover {
+      color: var.$Cyan;
+    }
   }
 }
 .price {
