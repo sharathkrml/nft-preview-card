@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import eqi from "../src/assets/image-equilibrium.jpg";
 import avatar from "../src/assets/image-avatar.png";
 import eth from "../src/assets/icon-ethereum.svg";
