@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import eqi from "../src/assets/image-equilibrium.jpg";
+import avatar from "../src/assets/image-avatar.png";
+import eth from "../src/assets/icon-ethereum.svg";
+import clock from "../src/assets/icon-clock.svg";
+
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main-div">
+        <div className="main-img">
+          <img src={eqi} alt="eqilibrium" />
+        </div>
+        <div className="main-head">Equilibrium #3429</div>
+        <div className="desc">
+          Our Equilibrium collection promotes balance and calm
+        </div>
+        <div className="eth-div">
+          <div className="price">
+            <img src={eth} alt="eth" />
+            0.041 ETH
+          </div>
+          <div className="time">
+            <img src={clock} alt="clock" /> 3 days left
+          </div>
+          <hr />
+          <div className="creator">
+            <div className="creator-img">
+              <img src={avatar} alt="avatar" />
+            </div>
+            <div className="creator-desc">
+              Creation of <span>Jules Wyvern</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
